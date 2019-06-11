@@ -22,10 +22,10 @@ git clone https://github.com/qibinc/GSoC-2019-ASR-Pipeline
 cd GSoC-2019-ASR-Pipeline
 ```
 
-Please download the Singularity container (with dependencies) by
+Please download the Singularity container (with built wav2letter++) by
 
 ```bash
-singularity pull docker://wav2letter/wav2letter:cuda-latest
+singularity pull docker://chenqibin422/wav2letter
 ```
 
 ### Next Steps
