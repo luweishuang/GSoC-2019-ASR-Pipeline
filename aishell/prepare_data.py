@@ -25,7 +25,7 @@ def write_sample(filename, idx, dst, transcripts_dict):
     basepath = os.path.join(dst, "%09d" % idx)
     name = os.path.splitext(os.path.basename(filename))[0]
     if name not in transcripts_dict:
-        return
+        return False
 
     # wav
     os.system(
@@ -49,6 +49,7 @@ def write_sample(filename, idx, dst, transcripts_dict):
     with open(basepath + ".id", "w") as f:
         f.write("file_id\t{fid}".format(fid=idx))
 
+    return True
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Aishell Dataset creation.")
@@ -89,9 +90,10 @@ if __name__ == "__main__":
         sys.stdout.write("writing to {dst}...\n".format(dst=dst))
         sys.stdout.flush()
 
+        idx = 0
         n_samples = len(wavfiles)
         for n in tqdm(range(n_samples)):
-            write_sample(wavfiles[n], n, dst, transcripts_dict)
+            idx += write_sample(wavfiles[n], idx, dst, transcripts_dict)
 
     # create tokens dictionary
     tkn_file = os.path.join(args.dst, "data", "wav/tokens.txt")
