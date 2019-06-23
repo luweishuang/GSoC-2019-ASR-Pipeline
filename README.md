@@ -37,7 +37,7 @@ singularity pull docker://chenqibin422/wav2letter
 - [x] Set up the Singularity container for running experiments
 - [x] Split Chinese audios using VAD (Voice Activity Detection) Tools
 - [x] ASR for English using wav2letter++ (for sanity check)
-- [ ] ASR for Chinese using wav2letter++ (demo)
+- [ ] (Ongoing) ASR for Chinese using wav2letter++ (demo)
 - [ ] Deploying ASR for Chinese as a pipeline
 
 ## Acknowledgement
