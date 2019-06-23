@@ -25,7 +25,7 @@ cd GSoC-2019-ASR-Pipeline
 Please download the Singularity container (with built wav2letter++) by
 
 ```bash
-singularity pull docker://chenqibin422/wav2letter
+singularity pull shub://qibinc/singularity_containers:wav2letter
 ```
 
 ### Next Steps
