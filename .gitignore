@@ -157,3 +157,4 @@ dmypy.json
 .pyre/
 
 *trainlogs/
+aishell/data/
