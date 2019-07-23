@@ -37,8 +37,8 @@ singularity pull shub://qibinc/singularity_containers:wav2letter
 - [x] Set up the Singularity container for running experiments
 - [x] Split Chinese audios using VAD (Voice Activity Detection) Tools
 - [x] ASR for English using wav2letter++ (for sanity check)
-- [ ] (Ongoing) ASR for Chinese using wav2letter++ (demo)
-- [ ] Deploying ASR for Chinese as a pipeline
+- [x] ASR for Chinese using wav2letter++ (demo)
+- [ ] (Ongoing) Deploying ASR for Chinese as a pipeline
 
 ## Acknowledgement
 
