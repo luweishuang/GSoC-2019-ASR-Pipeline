@@ -1,9 +1,12 @@
 train:
-	CUDA_VISIBLE_DEVICES=1,2 mpirun --allow-run-as-root -n 2 /home/wav2letter/build/Train train --flagsfile aishell/train_seq2seq_tds.cfg --enable_distributed true
+	/home/wav2letter/build/Train train --flagsfile aishell/train_seq2seq_tds.cfg
+
+distrib_train:
+	mpirun --allow-run-as-root -n 8 /home/wav2letter/build/Train train --flagsfile aishell/train_seq2seq_tds.cfg --enable_distributed true
 
 test:
 	/home/wav2letter/build/Test  \
-	--am=seq2seq_tds_trainlogs/001_model_data#dev__backup.bin \
+	--am=seq2seq_tds_trainlogs/001_model_data#dev.bin \
 	--test=data/test \
 	--maxload=-1 \
 	--show

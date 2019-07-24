@@ -30,7 +30,13 @@ singularity pull shub://qibinc/singularity_containers:wav2letter
 
 ### Next Steps
 
-...
+#### Training
+
+For training with 1 GPU, run `make train`. For distributed training on 8 GPUs, run `make distrib_train`. Have a look at `Makefile` and change the training configuration files to try various hyper-parameters / architectures.
+
+#### Testing
+
+Run `make test` and you can see the predicted texts and their ground truths. The final score will be printed at the final line, e.g., `[total WER: 60.8974%, total LER: 9.02436%, time: 364.033s]`.
 
 ## TODOLIST
 
